@@ -24,13 +24,13 @@ void CFeet::display()
 {
 	cout << feet << "英尺" << inches << "英寸" << endl;
 }
-CFeet CFeet::add(CFeet & objf)
+CFeet CFeet::add(CFeet & objf)  //objf是对象引用b
 {
 	CFeet temp;
 	temp.setvalue(feet + objf.feet, inches + objf.inches);
 	return temp;
 }
-CFeet CFeet::operator+(CFeet & objf)
+CFeet CFeet::operator+(CFeet & objf)  
 {
 	CFeet temp;
 	temp.setvalue(feet + objf.feet, inches + objf.inches);
@@ -41,7 +41,7 @@ int main()
 	CFeet A, B, C;
 	A.setvalue(10,11 );
 	B.setvalue(6,9 );
-	C = A + B; //有CFeet CFeet::operator+(CFeet & objf)的时候才能用c=a+b ，有CFeet CFeet::add(CFeet & objf)时用c=a.add(b)
+	C = A + B; //有CFeet CFeet::operator+(CFeet & objf)的时候能用c=a+b ，有CFeet CFeet::add(CFeet & objf)时用c=a.add(b)
 	C.display();
     return 0;
 }
