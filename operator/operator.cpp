@@ -41,7 +41,7 @@ int main()
 	CFeet A, B, C;
 	A.setvalue(10,11 );
 	B.setvalue(6,9 );
-	C = A + B; //==C=A.add(B)
+	C = A + B; //有CFeet CFeet::operator+(CFeet & objf)的时候才能用c=a+b ，有CFeet CFeet::add(CFeet & objf)时用c=a.add(b)
 	C.display();
     return 0;
 }
